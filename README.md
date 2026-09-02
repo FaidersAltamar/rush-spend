@@ -34,14 +34,15 @@ El token se guarda solo en tu navegador; no se envía a servidores externos.
 ## Estructura del proyecto
 
 ```
+rush-spend/
+├── manifest.json     # Configuración de la extensión
 ├── app.html          # Interfaz principal (popup)
 ├── app.js            # Lógica de la extensión
 ├── app.css           # Estilos (tema negro y amarillo RUSH)
 ├── background.js     # Service worker en segundo plano
-├── manifest.json     # Configuración de la extensión
 ├── icons/            # Iconos 16, 48 y 128 px
-├── generate-icons.py # Generador de iconos {R}
-└── run-full-pipeline.js  # Pipeline de traducción al español
+├── generate-icons.py # Regenerar iconos {R} (opcional)
+└── README.md
 ```
 
 ## Desarrollo
@@ -50,14 +51,6 @@ El token se guarda solo en tu navegador; no se envía a servidores externos.
 
 ```bash
 python generate-icons.py
-```
-
-### Pipeline de traducción
-
-Si partes del código fuente en ruso:
-
-```bash
-node run-full-pipeline.js
 ```
 
 ## Permisos
