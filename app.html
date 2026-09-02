@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="app.css" />
+  <title>RUSH Spend</title>
+</head>
+<body>
+  <header class="topbar">
+    <img class="logo" src="icons/icon48.png" alt="RUSH" />
+    <div class="brand">
+      <span class="brand-ads">RUSH</span>
+      <span class="brand-product">Spend</span>
+    </div>
+    <!-- línea de anuncio: vacía mientras no haya nada que decir. Ocupa ancho
+         con flex, así los botones de la derecha no se mueven cuando aparece el anuncio. -->
+    <div id="announce" class="announce hidden"></div>
+    <div class="topbar-actions">
+      <button id="btn-refresh" class="icon-btn" title="Actualizar datos"><span class="icon-glyph">⟳</span></button>
+      <button id="btn-expand" class="icon-btn" title="Expandir / contraer campañas">⌄</button>
+      <button id="btn-newtab" class="icon-btn" title="Abrir en pestaña aparte">⤢</button>
+      <button id="btn-settings" class="icon-btn" title="Ajustes">⚙</button>
+    </div>
+  </header>
+
+  <nav id="tabs" class="tabs"></nav>
+
+  <!-- motivo de marca: cables de tráfico -->
+  <div class="circuit" id="circuit" aria-hidden="true">
+    <svg id="circuit-svg" viewBox="0 0 420 14">
+      <circle class="dot" cx="6" cy="3" r="2.5" />
+      <circle class="dot" cx="6" cy="7" r="2.5" />
+      <circle class="dot" cx="6" cy="11" r="2.5" />
+      <path class="branch" d="M9 3 H60 L80 7" fill="none" stroke-width="1.5" />
+      <path class="branch" d="M9 7 H80" fill="none" stroke-width="1.5" />
+      <path class="branch" d="M9 11 H60 L80 7" fill="none" stroke-width="1.5" />
+      <path class="trunk" d="M80 7 H410" fill="none" stroke-width="1.5" />
+      <circle cx="413" cy="7" r="3" class="pulse" />
+    </svg>
+  </div>
+
+  <main id="view"></main>
+
+  <footer class="footer">
+    <span id="updated-at"></span>
+    <a href="https://www.skool.com/rush" target="_blank" rel="noopener">Herramienta de la comunidad RUSH</a>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
